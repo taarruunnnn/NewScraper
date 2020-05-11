@@ -45,7 +45,7 @@ article {
 
 @media (max-width: 600px) {
   article {
-    height: 110%;
+    height: 100%;
     padding-bottom: 5rem;
     min-width: 100vw;
     padding-left: 0rem;
@@ -128,7 +128,7 @@ time {
   opacity: 0.8;
   margin-top: 2px;
   font-weight: 600;
-  color: #f55555;
+  color: #f73030;
 }
 
 header {
