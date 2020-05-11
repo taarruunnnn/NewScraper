@@ -27,6 +27,7 @@ main {
   overflow: hidden;
   box-shadow: 0 40px 40px 0 rgba(0, 0, 0, 0.1);
   border: 2px solid rgba(0, 0, 0, 0.1);
+
 }
 
 section {
@@ -36,7 +37,7 @@ section {
 }
 
 article {
-  height: 110%;
+  height: 100%;
   padding-bottom: 5rem;
   min-width: 100vw;
   padding-left: 1rem;
