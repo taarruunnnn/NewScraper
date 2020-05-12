@@ -1,3 +1,4 @@
+const API_KEY='&apiKey=a38d9a5560114809bad1ba8be8df849c'
 const TOP_HEADLINES =
   "http://newsapi.org/v2/top-headlines?country=in&apiKey=a38d9a5560114809bad1ba8be8df849c";
 const GOOGLE_NEWS = `http://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=a38d9a5560114809bad1ba8be8df849c`;
@@ -6,10 +7,13 @@ const THE_HINDU =
 const TOI =
   "http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=a38d9a5560114809bad1ba8be8df849c";
 
+const EVERYTHING ='https://newsapi.org/v2/everything?q=';
+
 new Vue({
   el: "#app",
   data: {
     drawer: null,
+    searchterm:'bitcoin',
     items: [
       { id: 0, name: `Top Headlines`, news: [] },
       { id: 1, name: `Google News`, news: [] },
