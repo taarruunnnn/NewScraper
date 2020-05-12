@@ -1,20 +1,21 @@
 const API_KEY = "&apiKey=a38d9a5560114809bad1ba8be8df849c";
 const TOP_HEADLINES =
-  "http://newsapi.org/v2/top-headlines?country=in&apiKey=a38d9a5560114809bad1ba8be8df849c";
-const Business = `http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=a38d9a5560114809bad1ba8be8df849c`;
+  "https://newsapi.org/v2/top-headlines?country=in&apiKey=a38d9a5560114809bad1ba8be8df849c";
+const Business = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=a38d9a5560114809bad1ba8be8df849c`;
 const Entertainment =
-  "http://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=a38d9a5560114809bad1ba8be8df849c";
+  "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=a38d9a5560114809bad1ba8be8df849c";
 const Health =
-  "http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=a38d9a5560114809bad1ba8be8df849c";
+  "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=a38d9a5560114809bad1ba8be8df849c";
 
 const Science =
-  "http://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=a38d9a5560114809bad1ba8be8df849c";
+  "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=a38d9a5560114809bad1ba8be8df849c";
 const Sports =
   "http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=a38d9a5560114809bad1ba8be8df849c";
 const Technology =
-  "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=a38d9a5560114809bad1ba8be8df849c";
+  "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=a38d9a5560114809bad1ba8be8df849c";
 
 const EVERYTHING = "https://newsapi.org/v2/everything?q=";
+
 
 new Vue({
   el: "#app",
