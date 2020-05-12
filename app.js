@@ -1,24 +1,34 @@
-const API_KEY='&apiKey=a38d9a5560114809bad1ba8be8df849c'
+const API_KEY = "&apiKey=a38d9a5560114809bad1ba8be8df849c";
 const TOP_HEADLINES =
   "http://newsapi.org/v2/top-headlines?country=in&apiKey=a38d9a5560114809bad1ba8be8df849c";
-const GOOGLE_NEWS = `http://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=a38d9a5560114809bad1ba8be8df849c`;
-const THE_HINDU =
-  "http://newsapi.org/v2/top-headlines?sources=the-hindu&apiKey=a38d9a5560114809bad1ba8be8df849c";
-const TOI =
-  "http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=a38d9a5560114809bad1ba8be8df849c";
+const Business = `http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=a38d9a5560114809bad1ba8be8df849c`;
+const Entertainment =
+  "http://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=a38d9a5560114809bad1ba8be8df849c";
+const Health =
+  "http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=a38d9a5560114809bad1ba8be8df849c";
 
-const EVERYTHING ='https://newsapi.org/v2/everything?q=';
+const Science =
+  "http://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=a38d9a5560114809bad1ba8be8df849c";
+const Sports =
+  "http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=a38d9a5560114809bad1ba8be8df849c";
+const Technology =
+  "http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=a38d9a5560114809bad1ba8be8df849c";
+
+const EVERYTHING = "https://newsapi.org/v2/everything?q=";
 
 new Vue({
   el: "#app",
   data: {
     drawer: null,
-    searchterm:'bitcoin',
+    searchterm: "bitcoin",
     items: [
       { id: 0, name: `Top Headlines`, news: [] },
-      { id: 1, name: `Google News`, news: [] },
-      { id: 2, name: `The Hindu`, news: [] },
-      { id: 3, name: `Times Of India`, news: [] },
+      { id: 1, name: `Business`, news: [] },
+      { id: 2, name: `Entertainment`, news: [] },
+      { id: 3, name: `Health`, news: [] },
+      { id: 4, name: `Science`, news: [] },
+      { id: 5, name: `Sports`, news: [] },
+      { id: 6, name: `Technology`, news: [] }
     ],
 
     getNews: [],
@@ -54,24 +64,42 @@ new Vue({
       })
       .catch((err) => console.log(err));
 
-    fetch(GOOGLE_NEWS)
+    fetch(Business)
       .then((res) => res.json())
       .then((res) => {
         this.items[1].news = res.articles;
       })
       .catch((err) => console.log(err));
 
-    fetch(THE_HINDU)
+    fetch(Entertainment)
       .then((res) => res.json())
       .then((res) => {
         this.items[2].news = res.articles;
       })
       .catch((err) => console.log(err));
 
-    fetch(TOI)
+    fetch(Health)
       .then((res) => res.json())
       .then((res) => {
         this.items[3].news = res.articles;
+      })
+      .catch((err) => console.log(err));
+    fetch(Science)
+      .then((res) => res.json())
+      .then((res) => {
+        this.items[4].news = res.articles;
+      })
+      .catch((err) => console.log(err));
+    fetch(Sports)
+      .then((res) => res.json())
+      .then((res) => {
+        this.items[5].news = res.articles;
+      })
+      .catch((err) => console.log(err));
+    fetch(Technology)
+      .then((res) => res.json())
+      .then((res) => {
+        this.items[6].news = res.articles;
       })
       .catch((err) => console.log(err));
   },
