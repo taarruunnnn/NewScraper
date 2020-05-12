@@ -1,22 +1,24 @@
-const NYT_URL = `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=8cbrJsMqn1Gx83nGwPVv2Vvviq1xvGHJ`;
-
-const GUARDIAN_URL = `https://content.guardianapis.com/search?q=world&api-key=02ca7bf7-26a7-4e9d-b238-1172dead0938`;
-
-
-
+const TOP_HEADLINES =
+  "http://newsapi.org/v2/top-headlines?country=in&apiKey=a38d9a5560114809bad1ba8be8df849c";
+const GOOGLE_NEWS = `http://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=a38d9a5560114809bad1ba8be8df849c`;
+const THE_HINDU =
+  "http://newsapi.org/v2/top-headlines?sources=the-hindu&apiKey=a38d9a5560114809bad1ba8be8df849c";
+const TOI =
+  "http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=a38d9a5560114809bad1ba8be8df849c";
 
 new Vue({
   el: "#app",
   data: {
     drawer: null,
-    theme:null,
     items: [
-      { id: 0, name: `New York Times`, news: [], icon:'https://commons.wikimedia.org/wiki/File:NewYorkTimes.svg#/media/File:NewYorkTimes.svg' },
-      { id: 1, name: `The Guardian`, news: [] }
+      { id: 0, name: `Top Headlines`, news: [] },
+      { id: 1, name: `Google News`, news: [] },
+      { id: 2, name: `The Hindu`, news: [] },
+      { id: 3, name: `Times Of India`, news: [] },
     ],
-   
+
     getNews: [],
-    active: 0
+    active: 0,
   },
 
   methods: {
@@ -33,26 +35,40 @@ new Vue({
         month: "long",
         day: "2-digit",
         year: "numeric",
-        hour: '2-digit',
-        minute:'2-digit',
+        hour: "2-digit",
+        minute: "2-digit",
       });
-    }
+    },
   },
 
   created() {
-    fetch(NYT_URL)
+    fetch(TOP_HEADLINES)
       .then((res) => res.json())
       .then((res) => {
-        this.items[0].news = res.results;
+        this.items[0].news = res.articles;
         this.getNews = this.items[0].news;
       })
       .catch((err) => console.log(err));
 
-    fetch(GUARDIAN_URL)
+    fetch(GOOGLE_NEWS)
       .then((res) => res.json())
       .then((res) => {
-        this.items[1].news = res.response.results;
+        this.items[1].news = res.articles;
       })
       .catch((err) => console.log(err));
-  }
+
+    fetch(THE_HINDU)
+      .then((res) => res.json())
+      .then((res) => {
+        this.items[2].news = res.articles;
+      })
+      .catch((err) => console.log(err));
+
+    fetch(TOI)
+      .then((res) => res.json())
+      .then((res) => {
+        this.items[3].news = res.articles;
+      })
+      .catch((err) => console.log(err));
+  },
 });

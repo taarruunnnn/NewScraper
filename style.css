@@ -112,10 +112,6 @@ li:hover {
   margin: 0.5rem;
 }
 
-.navlist {
-  font-weight: 800;
-  font-size: large;
-}
 
 .active span {
   background: #fff;
@@ -175,13 +171,15 @@ h1 {
   display: inline-block;
 }
 
-.nav-list {
-  font-size: larger;
-  font-weight: 600;
+.navlist {
+  font-weight: 800;
+  font-size: large;
 }
+
 .news-source {
   font-size: x-large;
   font-weight: 800;
+  margin-left: 10px;
 }
 .avatar {
   padding: 1rem 0rem;
