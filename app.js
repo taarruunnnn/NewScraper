@@ -10,7 +10,7 @@ const Health =
 const Science =
   "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=a38d9a5560114809bad1ba8be8df849c";
 const Sports =
-  "http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=a38d9a5560114809bad1ba8be8df849c";
+  "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=a38d9a5560114809bad1ba8be8df849c";
 const Technology =
   "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=a38d9a5560114809bad1ba8be8df849c";
 
