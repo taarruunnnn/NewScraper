@@ -186,12 +186,14 @@ article {
     width: 300px;
     max-width: 100%;
     margin-right: 1rem;
-    margin-left: 0rem;
-    border-radius: 0.5rem;
+    margin-left: 1rem;
+   
+
     margin-bottom: 1rem;
   }
 
   .child {
     align-self: center;
   }
+
 }
